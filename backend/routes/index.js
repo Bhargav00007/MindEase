@@ -12,7 +12,7 @@ router.post('/signup', async (req, res) => {
         password
     })
     res.json({
-        msg: 'User created Successfully'
+        msg: 'User created Successfully',
     })
 });
 
@@ -33,7 +33,9 @@ router.post('/signin', async (req, res) => {
         })
     } else {
         res.json({
-            msg: "Invalid username or password"
+            msg: "Invalid username or password",
+            username, password
+
         }).status(403)
     }
 
