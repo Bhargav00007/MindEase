@@ -1,4 +1,7 @@
+import { emergencyHome } from "../emergency/emeragencyHome.js"
 import { meditationHome } from "./meditation/meditationHome.js"
+import { mt } from "./mt.js"
+import { therapyhome } from "./therapyHome.js"
 // import { signinPage } from "./signin"
 
 export function home() {
@@ -20,6 +23,9 @@ export function home() {
     chatbotDiv.className = 'eleDivs'
     chatbotDiv.id = 'chatbotDiv'
     chatbotDiv.textContent = "Chat Bot"
+    chatbotDiv.addEventListener('click', () => {
+        window.location.href = 'https://mediafiles.botpress.cloud/321199da-2b7b-4f09-9f0c-7400778a25d1/webchat/bot.html'
+    })
     home.appendChild(chatbotDiv)
 
     const moodtrackerDiv = document.createElement('div')
@@ -27,7 +33,7 @@ export function home() {
     moodtrackerDiv.id = 'moodtrackerDiv'
     moodtrackerDiv.textContent = "Mood Tracker"
     moodtrackerDiv.onclick = () => {
-        signinPage()
+        mt()
     }
     home.appendChild(moodtrackerDiv)
 
@@ -45,6 +51,9 @@ export function home() {
     therapyDiv.id = 'therapyDiv'
     therapyDiv.textContent = "Therapy"
     therapyDiv.onclick = () => {
+        container.textContent = ''
+        therapyhome()
+
     }
     home.appendChild(therapyDiv)
 
@@ -52,8 +61,10 @@ export function home() {
     emergencyDiv.className = 'eleDivs'
     emergencyDiv.id = 'emergencyDiv'
     emergencyDiv.textContent = "Emergency"
-    emergencyDiv.onclick = () => {
-    }
+    emergencyDiv.addEventListener('click', () => {
+        container.textContent = "";
+        emergencyHome()
+    })
     home.appendChild(emergencyDiv)
 
     container.appendChild(home)

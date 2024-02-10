@@ -14,6 +14,7 @@ export function signinPage() {
 
     const passwordInputEle = document.createElement('input')
     passwordInputEle.id = 'passwordInput'
+    passwordInputEle.type = 'password'
 
     const signinBtnEle = document.createElement('button')
     signinBtnEle.id = 'signinBtn'

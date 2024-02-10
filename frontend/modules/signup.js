@@ -11,9 +11,13 @@ export function signupPage() {
     signupDiv.appendChild(textDiv)
 
     const usernameUpInputEle = document.createElement('input')
+
+    usernameUpInputEle.placeholder = 'Username'
     usernameUpInputEle.id = 'usernameUpInput'
 
     const passwordUpInputEle = document.createElement('input')
+    passwordUpInputEle.type = 'password'
+    passwordUpInputEle.placeholder = 'Password'
     passwordUpInputEle.id = 'passwordUpInput'
 
     const signupBtnEle = document.createElement('button')
