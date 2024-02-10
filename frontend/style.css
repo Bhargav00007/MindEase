@@ -6,9 +6,23 @@ body {
 	background-size: cover;
 }
 
+body::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: inherit;
+	background-size: cover;
+	filter: blur(3px);
+	z-index: -1;
+}
+
 #navBar {
-	height: 10vh;
+	height: 5vh;
 	padding: 20px;
+	background-color: rgba(15, 84, 61, 0.399);
 }
 
 #container {
@@ -62,20 +76,20 @@ body {
 	background-position: center;
 }
 
-#emergencyDiv:hover {
-	background-image: url(https://t3.ftcdn.net/jpg/05/98/09/44/360_F_598094473_o09n2AcwDeYC3UjPan7tRU82BIZ5qab9.jpg);
-	background-size: cover;
-	background-position: center;
-}
-
 #chatbotDiv:hover {
 	background-image: url(https://www.shutterstock.com/image-vector/concept-chatbot-cartoon-cute-white-260nw-2272101605.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+#emergencyDiv:hover {
 	margin-top: 10%;
+	background-image: url(https://t3.ftcdn.net/jpg/05/98/09/44/360_F_598094473_o09n2AcwDeYC3UjPan7tRU82BIZ5qab9.jpg);
 	background-position: center;
 	background-size: cover;
 }
 
-#chatbotDiv {
+#emergencyDiv {
 	margin-top: 10%;
 	background-position: center;
 	background-size: cover;
@@ -149,6 +163,14 @@ body {
 	border-radius: 20px;
 	margin-bottom: 20%;
 	margin-left: 25px;
+}
+
+video {
+	background: linear-gradient(
+		rgba(0, 0, 0, 1) 10%,
+		rgba(0, 0, 0, 0.68),
+		rgba(0, 0, 0, 0) 80%
+	);
 }
 
 .forwardBtn,

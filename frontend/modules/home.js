@@ -5,6 +5,33 @@ import { therapyhome } from "./therapyHome.js"
 // import { signinPage } from "./signin"
 
 export function home() {
+
+    const video = document.createElement('video');
+    // Set the attributes
+    video.setAttribute('autoplay', '');
+    video.setAttribute('loop', '');
+    video.setAttribute('muted', '');
+    video.setAttribute('playsinline', '');
+    video.style.background = 'linear-gradient(to bottom right, black, white)';
+
+
+    // Create the source element
+    const source = document.createElement('source');
+    source.setAttribute('src', './modules/videos/bg4.mp4');
+    source.setAttribute('type', 'video/mp4');
+
+    // Append the source element to the video element
+    video.appendChild(source);
+
+    video.style.position = 'absolute';
+    video.style.right = '0';
+    video.style.bottom = '0';
+    video.style.zIndex = '-1';
+    video.style.background = 'cover'
+    // Append the video element to the container (assuming container is already defined)
+    container.appendChild(video);
+
+
     const home = document.createElement("div")
     home.id = 'home'
 
@@ -15,9 +42,10 @@ export function home() {
     meditationDiv.textContent = "Meditation"
     meditationDiv.addEventListener('click', () => {
         container.textContent = "";
+
         meditationHome()
+
     })
-    home.appendChild(meditationDiv)
 
     const chatbotDiv = document.createElement('div')
     chatbotDiv.className = 'eleDivs'
@@ -26,25 +54,23 @@ export function home() {
     chatbotDiv.addEventListener('click', () => {
         window.location.href = 'https://mediafiles.botpress.cloud/321199da-2b7b-4f09-9f0c-7400778a25d1/webchat/bot.html'
     })
-    home.appendChild(chatbotDiv)
 
     const moodtrackerDiv = document.createElement('div')
     moodtrackerDiv.className = 'eleDivs'
     moodtrackerDiv.id = 'moodtrackerDiv'
     moodtrackerDiv.textContent = "Mood Tracker"
-    moodtrackerDiv.onclick = () => {
-        mt()
-    }
-    home.appendChild(moodtrackerDiv)
+    moodtrackerDiv.addEventListener('click', () => {
+        window.location.href = 'moodtracker.html'
+    })
 
 
     const echochamberDiv = document.createElement('div')
     echochamberDiv.className = 'eleDivs'
     echochamberDiv.id = 'echochamberDiv'
     echochamberDiv.textContent = "Echo Chamber"
-    echochamberDiv.onclick = () => {
-    }
-    home.appendChild(echochamberDiv)
+    echochamberDiv.addEventListener('click', () => {
+        window.location.href = 'https://echochamber.adaptable.app/'
+    })
 
     const therapyDiv = document.createElement('div')
     therapyDiv.className = 'eleDivs'
@@ -55,7 +81,6 @@ export function home() {
         therapyhome()
 
     }
-    home.appendChild(therapyDiv)
 
     const emergencyDiv = document.createElement('div')
     emergencyDiv.className = 'eleDivs'
@@ -65,7 +90,12 @@ export function home() {
         container.textContent = "";
         emergencyHome()
     })
+    home.appendChild(meditationDiv)
     home.appendChild(emergencyDiv)
+    home.appendChild(therapyDiv)
+    home.appendChild(moodtrackerDiv)
+    home.appendChild(echochamberDiv)
+    home.appendChild(chatbotDiv)
 
     container.appendChild(home)
 }
