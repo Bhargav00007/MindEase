@@ -8,8 +8,27 @@
 		<title>MindEase</title>
 	</head>
 	<body>
-		<div id="container"></div>
+		<div
+			id="navBar"
+			class="flex"
+			style="display: flex; justify-content: space-between">
+			<img
+				src="./logo.png"
+				style="height: 5vh"
+				alt="" />
 
+			<a
+				id="signout"
+				onclick="event.preventDefault(); window.location.reload()"
+				style="text-decoration: none; padding-left: 200px"
+				href="#"
+				>Sign out</a
+			>
+		</div>
+		<div id="container"></div>
+		<link
+			rel="stylesheet"
+			href="style.css" />
 		<script
 			type="module"
 			src="script.js"></script>

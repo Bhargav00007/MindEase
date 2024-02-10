@@ -1,0 +1,152 @@
+body {
+	background-image: url(https://static.vecteezy.com/system/resources/previews/029/343/175/non_2x/ai-generative-of-a-man-practicing-mindfulness-and-meditation-in-a-peaceful-natural-environment-sony-a7s-realistic-image-ultra-hd-high-design-very-detailed-free-photo.jpg);
+	display: flex;
+	flex-direction: column;
+	background-size: cover;
+}
+
+#navBar {
+	height: 10vh;
+	padding: 20px;
+}
+
+#container {
+	height: 60vh;
+	display: flex;
+	align-items: center;
+	width: auto;
+	justify-content: center;
+}
+
+#home {
+	display: flex;
+	flex-wrap: wrap; /* Allows items to wrap to the next line */
+	width: 100%;
+	margin: 20px;
+	justify-content: center;
+}
+
+.eleDivs {
+	border: 3px solid black;
+	border-radius: 26px;
+	margin: 50px;
+	width: 25vw;
+	transition: all 0.4s;
+	height: auto;
+	display: flex;
+	align-items: start;
+	justify-content: center;
+	text-align: center;
+	font-weight: bolder;
+	font-size: xx-large;
+	color: rgb(255, 255, 255);
+	padding: 2%;
+	background-color: rgba(201, 201, 201, 0.481);
+}
+
+.eleDivs:hover {
+	transform: scale(1.2);
+}
+
+#meditationDiv {
+	background-size: cover;
+	margin-top: 10%;
+	background-position: center;
+}
+
+#meditationDiv:hover {
+	background-image: url(modules/assests/med.jpg);
+	background-size: cover;
+	margin-top: 10%;
+	background-position: center;
+}
+
+#emergencyDiv:hover {
+	background-image: url(https://t3.ftcdn.net/jpg/05/98/09/44/360_F_598094473_o09n2AcwDeYC3UjPan7tRU82BIZ5qab9.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+#chatbotDiv:hover {
+	background-image: url(https://www.shutterstock.com/image-vector/concept-chatbot-cartoon-cute-white-260nw-2272101605.jpg);
+	margin-top: 10%;
+	background-position: center;
+	background-size: cover;
+}
+
+#chatbotDiv {
+	margin-top: 10%;
+	background-position: center;
+	background-size: cover;
+}
+#moodtrackerDiv:hover {
+	background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVaCqwZFLvjWvvrGcgrYPZtRsz4_EPsAucSw&usqp=CAU);
+	background-position: center;
+	background-size: cover;
+}
+#echochamberDiv:hover {
+	background-image: url(modules/assests/echo\ chamber.jpg);
+	background-position: center;
+	background-size: cover;
+}
+#therapyDiv:hover {
+	background-image: url(https://www.saturdayeveningpost.com/wp-content/uploads/satevepost/2017-10-12-therapy-cartoons-03-banner.jpg);
+	background-position: center;
+	background-size: cover;
+}
+
+#signout {
+	color: aliceblue;
+	font-size: large;
+	font-weight: bold;
+}
+
+.signupDiv,
+.signinDiv {
+	background-color: rgba(255, 255, 255, 0.575);
+	height: 70%;
+	border: 1px solid white;
+	width: 30%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 5%;
+}
+
+#usernameInput,
+#usernameUpInput,
+#passwordInput,
+#passwordUpInput {
+	padding-bottom: 30px;
+	margin-bottom: 30px;
+}
+
+.textDiv {
+	font-size: xx-large;
+	padding-bottom: 15%;
+}
+
+.playerImgs {
+	height: 30vh;
+	background-size: cover;
+	width: 30vh;
+	border: 1px solid black;
+	border-radius: 20px;
+	margin-bottom: 20%;
+	margin-left: 25px;
+}
+
+.forwardBtn,
+.backwardBtn {
+	width: 50%;
+	font-weight: bolder;
+	font-size: x-large;
+	height: 5vh;
+}
+
+#stressImg {
+	background-image: url(https://www.dynamicpixel.co.in/blog/wp-content/uploads/2018/09/Managing-Stress-1.jpg);
+	background-position: center;
+	/* height: 10vh;
+	width: 10%; */
+}

@@ -3,7 +3,12 @@ import { signinPage } from "./signin.js"
 
 export function signupPage() {
     const signupDiv = document.createElement('div')
-    signupDiv.id = 'signupDiv'
+    signupDiv.className = 'signupDiv'
+
+    const textDiv = document.createElement('div')
+    textDiv.textContent = 'Sign up'
+    textDiv.className = "textDiv"
+    signupDiv.appendChild(textDiv)
 
     const usernameUpInputEle = document.createElement('input')
     usernameUpInputEle.id = 'usernameUpInput'
